@@ -1,0 +1,26 @@
+.container {
+    width: 260px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.prefs-container {
+    text-align: left;
+}
+input[type=number] {
+    height: 100px;
+    width: 120px;
+    text-align: center;
+    font-size: 60pt;
+}
+input[type=button] {
+    width: 260px;
+    height: 80px;
+    margin-top: 10px;
+    font-size: 40pt;
+}
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}

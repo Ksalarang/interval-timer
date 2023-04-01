@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Timer</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="scripts/utils/logs.js"></script>
+        <script src="scripts/utils/time.js"></script>
+        <script src="scripts/script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Interval Timer</h1>
+            <form>
+                <div class="prefs-container">
+                    <input id="autoRepeat" type="checkbox" checked>
+                    <label for="autoRepeat">Auto-repeat</label>
+                </div>
+                <br>
+                <input id="minutes" type="number" value="00" min="0" max="59" maxlength="2">
+                <input id="seconds" type="number" value="02" min="0" max="59" maxlength="2">
+                <br>
+                <input id="startButton" type="button" value="Start">
+            </form>
+        </div>
+    </body>
+</html>
