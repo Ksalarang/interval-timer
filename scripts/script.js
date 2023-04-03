@@ -1,7 +1,7 @@
 "use strict"
 let timer = new Timer()
 const prevTime = Time.getInstance()
-const dingAudio = new Audio("res/ding.mp3")
+const dingAudio = new Audio("res/water-plop.mp3")
 const logger = Logger.get(window, true)
 let minutesElement
 let secondsElement
