@@ -24,3 +24,7 @@ input[type=checkbox] {
     height: 20px;
     vertical-align: middle;
 }
+input[type=range] {
+    vertical-align: middle;
+    margin-left: 15px;
+}

@@ -1,12 +1,13 @@
 "use strict"
 let timer = new Timer()
 const prevTime = Time.getInstance()
-const dingAudio = new Audio("res/water-plop.mp3")
+const audioElement = new Audio("res/water-plop.mp3")
 const logger = Logger.get(window, true)
 let minutesElement
 let secondsElement
 let startButton
 let autoRepeatCheckbox
+let volumeSlider
 let timeoutId
 
 window.onload = () => {
@@ -14,6 +15,8 @@ window.onload = () => {
     secondsElement = document.getElementById("seconds")
     startButton = document.getElementById("startButton")
     autoRepeatCheckbox = document.getElementById("autoRepeat")
+    volumeSlider = document.getElementById("volumeSlider")
+    volumeSlider.value = 1
     minutesElement.addEventListener("focus", () => onGainFocus(minutesElement))
     minutesElement.addEventListener("input", () => validate(minutesElement))
     minutesElement.addEventListener("focusout", () => format(minutesElement))
@@ -21,6 +24,9 @@ window.onload = () => {
     secondsElement.addEventListener("input", () => validate(secondsElement))
     secondsElement.addEventListener("focusout", () => format(secondsElement))
     startButton.addEventListener("click", onClickStart)
+    volumeSlider.addEventListener("input", () => {
+        audioElement.volume = volumeSlider.value
+    })
     minutesElement.focus()
 }
 
@@ -57,7 +63,7 @@ function onClickStop() {
 }
 
 function onTimerEnd() {
-    dingAudio.play()
+    audioElement.play()
     if (autoRepeatCheckbox.checked) {
         onClickStop()
         onClickStart()
